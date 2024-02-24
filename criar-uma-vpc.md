@@ -1,16 +1,6 @@
-## Criar uma VPC
+# Material de apoio
 
-- Escolher o serviço VPC
-- Escolher a região
-- Criar VPC
-- Somente VPC
-- Tag de nome(opcional)
-- Bloco CIDR IPv4 escolher manual e inserir 10.0.0.0/16
-- Locação padrão
-- Tag
-- Criar VPC
-
-## Criar sub redes
+## POC - LOGS
 
 - Clicar em sub redes
 - Criar sub redes
@@ -21,54 +11,16 @@
 - Tags (opcional)
 - Criar subredes ou adicionar mais subredes
 
-## Criar instância ec2
+### Links
 
-- Ir em EC2
-- Clicar em execurar intância
-- Informar nome
-- Escolher AMI
-- Escolher tipo de instância
-- Criar ou selecionar par de chaves
-- Em configurações de rede escolher a vpc
-- Selecionar a subnet pública
-- Habilitar: Atribuir IP público automaticamente
-- Crear grupo de segurança
-- Remover a regra e adicionar regra para o grupo de segurança
-- Em Detalhes Avançados adicionar Dados do Usuário (Script para quando rodar a instância pela primeira vez se executado - pode ser instalação de um programa como o jdk por exemplo)
+- [Configurando o logback](https://helpdev.com.br/2020/02/24/java-configurando-o-log-slf4j-de-sua-aplicacao-para-o-logstash-elk/)
+- [Configurando logback no spring boot](https://artefatox.com/configurando-logback-no-springboot/)
+- []()
 
-## Rede pública e Internet Gateway
+## POC
 
-### Criar Internet Gateway
-
-- Em VPC entrar em Gateways de internet
-- Criar internet Gateway
-- Informar o nome e criar
-- - Escolher ações
-- Associar o internet gateway a VPC
-- Informar a VPC
-
-### Criar Tabelas de Rotas
-
-- Em VPC ir em tabelas de rotas
-- Criar tabela de rotas
-- Informar o nome
-- Escolher a VPC
-- Informar tags
-
-### Associar Tabela de Rotas a Subnet pública
-
-- Na Tabela de Rotas que deseja associar ir em associação de subredes
-- Editar associação de sub redes
-- Escolher a sub rede pública e salvar a associação
-
-### Informar a rota
-
-- Na tabela de rotas que deseja informar a rota ir em Rotas
-- Editar rotas
-- Adicionar rotas
-- Informar destino (0.0.0.0/0)
-- Informar alvo Internet Gateway
-- Escolher o internet gateway
+eseja associar ir em associação de subredes
+-
 - Salvar alterações
 
 
