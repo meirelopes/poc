@@ -5,6 +5,7 @@ import com.meire.poc.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioService {
@@ -25,5 +26,19 @@ public class UsuarioService {
         novoUsuario.setCpf(usuario.getCpf());
         usuarioRepository.save(novoUsuario);
         return novoUsuario;
+    }
+    public Usuario buscarUsuarioPorId(Long id) {
+        Optional<Usuario> usuario = usuarioRepository.findById(id);
+        if (usuario ==  null){
+            return null;
+        }
+        return usuario.get();
+    }
+
+    public void deletarUsuario(Long id){
+        Optional<Usuario> usuario = usuarioRepository.findById(id);
+        if (usuario!=null){
+            usuarioRepository.deleteById(id);
+        }
     }
 }
